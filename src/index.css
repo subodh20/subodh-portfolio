@@ -1,0 +1,104 @@
+@import "./tailwindImport.css";
+
+@layer base {
+  :root {
+    --background: #e8eff5;
+    --foreground: #0f172a;
+
+    --card: #f5f8fb;
+    --card-foreground: #0f172a;
+
+    --primary: #0284c7;
+    --primary-foreground: #f0f9ff;
+
+    --secondary: #334155;
+    --secondary-foreground: #f5f8fb;
+
+    --accent: #f5f8fb;
+    --accent-foreground: #475569;
+
+    --border: #c1ccd9;
+    --input: #c1ccd9;
+    --ring: #0284c7;
+
+    --radius: 0.5rem;
+
+    --shadow-2xs: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+    --shadow-xs: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0px rgba(0, 0, 0, 0.1),
+      0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    --shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.1),
+      0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 1px 3px 0px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 1px 3px 0px rgba(0, 0, 0, 0.1),
+      0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 1px 3px 0px rgba(0, 0, 0, 0.1),
+      0 8px 10px -1px rgba(0, 0, 0, 0.1);
+    --shadow-2xl: 0 1px 3px 0px rgba(0, 0, 0, 0.25);
+    --tracking-normal: 0em;
+    --spacing: 0.25rem;
+  }
+  .dark {
+    --background: #0f172a;
+    --foreground: #f5f8fb;
+
+    --card: #1e293b;
+    --card-foreground: #f5f8fb;
+
+    --primary: #38bdf8;
+    --primary-foreground: #082f49;
+
+    --secondary: #c1ccd9;
+    --secondary-foreground: #020617;
+
+    --accent: #020617;
+    --accent-foreground: #8b9cb3;
+
+    --border: #475569;
+    --input: #475569;
+    --ring: #38bdf8;
+
+    --shadow-2xs: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+    --shadow-xs: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0px rgba(0, 0, 0, 0.1),
+      0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    --shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.1),
+      0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 1px 3px 0px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 1px 3px 0px rgba(0, 0, 0, 0.1),
+      0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 1px 3px 0px rgba(0, 0, 0, 0.1),
+      0 8px 10px -1px rgba(0, 0, 0, 0.1);
+    --shadow-2xl: 0 1px 3px 0px rgba(0, 0, 0, 0.25);
+  }
+}
+@layer base {
+  * {
+    border: var(-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    color: var(--foreground);
+    background: var(--background);
+  }
+}
+@layer components {
+}
+@layer utilities {
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
