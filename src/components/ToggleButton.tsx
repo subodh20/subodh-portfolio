@@ -1,7 +1,7 @@
 import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5";
-import { useTheme } from "../hooks/useTheme";
+import { useThemeContext } from "../hooks/useThemeContext";
 const ToggleButton = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useThemeContext();
   const isDark = theme === "dark";
   const toggleTheme = () => {
     const newTheme = isDark ? "light" : "dark";
