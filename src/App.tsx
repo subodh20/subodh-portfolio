@@ -2,7 +2,7 @@ import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainApp from "./components/MainApp";
 import PageNotFound from "./components/PageNotFound";
-
+import ThemeProvider from "./components/ThemeProvider";
 function App(): JSX.Element {
   const router = createBrowserRouter([
     {
@@ -14,6 +14,10 @@ function App(): JSX.Element {
       element: <PageNotFound />,
     },
   ]);
-  return <RouterProvider router={router} />;
+  return (
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  );
 }
 export default App;
