@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import ToggleButton from "./ToggleButton";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { FaXmark } from "react-icons/fa6";
 const navItems = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
@@ -10,6 +12,7 @@ const navItems = [
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileOpen] = useState(false);
   useEffect(() => {
     const detectIfWindowIsScrolled = () => {
       setIsScrolled(window.scrollY > 50);
@@ -44,8 +47,37 @@ const Navbar = () => {
             ))}
             <ToggleButton />
           </div>
+          <div className="md:hidden flex items-center gap-2">
+            <ToggleButton />
+            <button
+              className="p-2 cursor-pointer"
+              onClick={() => setIsMobileOpen((prev) => !prev)}
+            >
+              {isMobileMenuOpen ? (
+                <FaXmark className="h-6 w-6" />
+              ) : (
+                <GiHamburgerMenu className="h-6 w-6" />
+              )}
+            </button>
+          </div>
         </div>
       </div>
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-background/95 backdrop-blur-lg border-b border-border/50">
+          <div className="container mx-auto px-6 py-4 space-y-4">
+            {navItems.map(({ label, href }) => (
+              <a
+                key={label}
+                href={href}
+                className="block text-lg text-muted-background hover:text-(--foreground) transition-colors"
+                onClick={() => setIsMobileOpen(false)}
+              >
+                {label}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

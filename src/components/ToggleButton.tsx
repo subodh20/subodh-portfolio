@@ -12,7 +12,7 @@ const ToggleButton = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="h-9 w-9 flex items-center justify-center"
+      className="h-9 w-9 flex items-center justify-center cursor-pointer"
     >
       {isDark ? (
         <IoMoonOutline className="h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />

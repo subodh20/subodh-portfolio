@@ -4,10 +4,7 @@ import Contact from "./Contact";
 import Skills from "./Skills";
 import Navbar from "./Navbar";
 import BriefIntro from "./BriefIntro";
-import { useThemeContext } from "../hooks/useThemeContext";
 const MainApp = () => {
-  const { theme } = useThemeContext();
-  console.log(theme);
   return (
     <div>
       <Navbar />
