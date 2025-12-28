@@ -1,8 +1,8 @@
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import MainApp from "./components/MainApp";
-import PageNotFound from "./components/PageNotFound";
-import ThemeProvider from "./components/ThemeProvider";
+import MainApp from "./pages/MainApp";
+import PageNotFound from "./pages/PageNotFound";
+import ThemeProvider from "./contexts/ThemeProvider";
 function App(): JSX.Element {
   const router = createBrowserRouter([
     {
