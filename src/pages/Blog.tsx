@@ -1,18 +1,38 @@
 import BlogPlatformCard from "../components/BlogPlatformCard";
+import { useEffect, useState } from "react";
 import { FaBookOpen } from "react-icons/fa";
+import FeaturedArticleCard from "../components/FeaturedArticleCard";
 const blogPlateforms = [
   {
     name: "Medium",
-    description: "",
-    url: "",
-    icon: FaBookOpen,
-    articlesCount: 1,
+    description: "Medium articles",
+    url: "https://subodhtiwari360.medium.com/",
+    Icon: FaBookOpen,
+    articlesCount: 0,
     color: "from-green-500/20 to-green-600/10",
     borderColor: "border-green-500/30",
     iconColor: "text-green-500",
   },
 ];
 const Blog = () => {
+  const [blogArticles, setBlogArticles] = useState([]);
+  console.log(blogArticles);
+  useEffect(() => {
+    const getArticles = async () => {
+      try {
+        const res = await fetch(
+          "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@subodhtiwari360"
+        );
+        const data = await res.json();
+
+        setBlogArticles(data.items);
+      } catch (error) {
+        reportError(error);
+      }
+    };
+    getArticles();
+  }, []);
+  console.log(blogArticles);
   return (
     <section id="blog" className="py-24 relative">
       <div className="container mx-auto px-6">
@@ -31,6 +51,16 @@ const Blog = () => {
           {blogPlateforms.map((item, index) => (
             <BlogPlatformCard key={index} platform={item} />
           ))}
+        </div>
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-2xl font-bold mb-8 text-center">
+            Featured Articles
+          </h3>
+          <div className="space-y-4">
+            {blogArticles.slice(0, 3).map((article, index) => (
+              <FeaturedArticleCard key={index} article={article} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
