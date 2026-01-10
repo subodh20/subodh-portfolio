@@ -14,7 +14,7 @@ import ProjectsCard from "../components/ProjectsCard";
 const Projects = () => {
   return (
     <section id="projects" className="py-24 relative">
-      <div className="container max-auto px-6 ">
+      <div className="container mx-auto px-6 ">
         <div className="text-center mb-16">
           <p className="text-accent font-mono text-sm mb-4 tracking-wider uppercase">
             Portfolio
@@ -22,7 +22,7 @@ const Projects = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Featured Projects
           </h2>
-          <p className="text-muted-foreground max-w-2xl max-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             A selection of projects that showscase my skills and passion for
             creating quality software applications
           </p>
