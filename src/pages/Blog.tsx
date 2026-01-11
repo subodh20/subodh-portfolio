@@ -2,10 +2,11 @@ import BlogPlatformCard from "../components/BlogPlatformCard";
 import { useEffect, useState } from "react";
 import { FaBookOpen } from "react-icons/fa";
 import FeaturedArticleCard from "../components/FeaturedArticleCard";
-const blogPlateforms = [
+
+let blogPlateforms = [
   {
     name: "Medium",
-    description: "Medium articles",
+    description: "Read all of my articles on Medium",
     url: "https://subodhtiwari360.medium.com/",
     Icon: FaBookOpen,
     articlesCount: 0,
@@ -16,7 +17,15 @@ const blogPlateforms = [
 ];
 const Blog = () => {
   const [blogArticles, setBlogArticles] = useState([]);
-  console.log(blogArticles);
+
+  const updateArticleCount = (count: number) => {
+    blogPlateforms = blogPlateforms.map((platform) => {
+      return platform.name === "Medium"
+        ? { ...platform, articlesCount: count }
+        : platform;
+    });
+  };
+
   useEffect(() => {
     const getArticles = async () => {
       try {
@@ -24,7 +33,7 @@ const Blog = () => {
           "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@subodhtiwari360"
         );
         const data = await res.json();
-
+        updateArticleCount(data.items.length);
         setBlogArticles(data.items);
       } catch (error) {
         reportError(error);
