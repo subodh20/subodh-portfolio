@@ -5,6 +5,7 @@ import Skills from "./Skills";
 import Navbar from "../components/Navbar";
 import BriefIntro from "./BriefIntro";
 import Projects from "./Projects";
+import Footer from "./Footer";
 const MainApp = () => {
   return (
     <div>
@@ -15,6 +16,7 @@ const MainApp = () => {
       <Projects />
       <Blog />
       <Contact />
+      <Footer />
     </div>
   );
 };
