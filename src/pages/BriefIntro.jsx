@@ -1,6 +1,15 @@
 import { FaArrowRight, FaGithub, FaLinkedin } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 const BriefIntro = () => {
+  console.log(window.location.origin);
+  const createDownloadLinkandDownloadFile = () => {
+    const link = document.createElement("a");
+    link.href = "/subodh-tiwari-resume.docx";
+    link.download = "Subodh-Tiwari-Resume.docx";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background gradient */}
@@ -41,7 +50,9 @@ const BriefIntro = () => {
               <button className="">View My Work</button>
               <FaArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </div>
-            <button>Download Resume</button>
+            <button onClick={createDownloadLinkandDownloadFile}>
+              Download Resume
+            </button>
           </div>
           {/* My social links */}
           <div
