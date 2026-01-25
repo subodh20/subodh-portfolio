@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ToggleButton from "./ToggleButton";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaXmark } from "react-icons/fa6";
+import NavItem from "./NavItem";
 const navItems = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
@@ -13,6 +14,7 @@ const navItems = [
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   useEffect(() => {
     const detectIfWindowIsScrolled = () => {
       setIsScrolled(window.scrollY > 50);
@@ -27,13 +29,13 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border/50"
+          ? "bg-var(--background/80) backdrop-blur-lg border-b border-var(--border/50)"
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="#">
+          <a href="#" onClick={() => setActiveIndex(null)}>
             <svg
               className="h-30 w-30"
               viewBox="0 0 1000 1000"
@@ -49,15 +51,15 @@ const Navbar = () => {
             </svg>
           </a>
           <div className="hidden md:flex items-center gap-8">
-            {navItems.map(({ label, href }) => (
-              <a
-                key={label}
-                href={href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors relative group"
-              >
-                {label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-(--accent) transition-all duration-300 group-hover:w-full" />
-              </a>
+            {navItems.map((item, index) => (
+              <NavItem
+                key={index}
+                label={item.label}
+                href={item.href}
+                isActive={index === activeIndex}
+                index={index}
+                onNavItemClick={(index) => setActiveIndex(index)}
+              />
             ))}
             <ToggleButton />
           </div>

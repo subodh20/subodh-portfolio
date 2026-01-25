@@ -1,7 +1,6 @@
 import { FaArrowRight, FaGithub, FaLinkedin } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 const BriefIntro = () => {
-  console.log(window.location.origin);
   const createDownloadLinkandDownloadFile = () => {
     const link = document.createElement("a");
     link.href = "/subodh-tiwari-resume.docx";
@@ -13,9 +12,9 @@ const BriefIntro = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-radial from-(--accent/20) via-transparent to-transparent opacity-50" />
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-(--accent/30) rounded-full blur-[128px]" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-(--primary/20) rounded-full blur-[128px]" />
+      <div className="absolute inset-0 bg-gradient-radial from-var(--accent/20) via-transparent to-transparent opacity-50" />
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-var(--accent/30) rounded-full blur-[128px]" />
+      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-var(--primary/20) rounded-full blur-[128px]" />
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center ">
           {/* Introduction Section */}
@@ -23,8 +22,8 @@ const BriefIntro = () => {
             className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in "
             style={{ animationDelay: "0.3s" }}
           >
-            <span className="text-(--foreground)">Hi, I'm </span>
-            <span className="text-(--gradient)">Subodh Tiwari</span>
+            <span className="text-foreground">Hi, I'm </span>
+            <span className="text-gradient">Subodh Tiwari</span>
           </h1>
           {/* Subtitle */}
           <p
