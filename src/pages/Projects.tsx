@@ -14,7 +14,7 @@ import ProjectsCard from "../components/ProjectsCard";
 const Projects = () => {
   return (
     <section id="projects" className="py-24 relative">
-      <div className="container mx-auto px-6 ">
+      <div className="container  mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-accent font-mono text-sm mb-4 tracking-wider uppercase">
             Portfolio
@@ -32,7 +32,7 @@ const Projects = () => {
             <ProjectsCard key={index} index={index} project={project} />
           ))}
         </div>
-        <div className="text-center mt-16">
+        <div className="flex justify-center items-center  mt-16">
           <button className="flex flex-row items-center border border-input bg-background hover:bg-(--accent) hover:text-(--accent-foreground) h-11 rounded-md px-8 cursor-pointer transition-colors">
             View All Projects
             <FaExternalLinkAlt className="ml-2 h-4 w-4" />

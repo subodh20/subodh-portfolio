@@ -69,7 +69,7 @@ const ProjectsCard = (props: ProjectCardsProp): React.JSX.Element => {
         <p className="text-muted-foreground leading-relaxed">
           {project.description}
         </p>
-        <div className="flex flex-wrap gap-2 pt-2">
+        <div className="flex flex-wrap items-center justify-center  gap-2 pt-2 lg:justify-start">
           {project.techStack.map((item, index) => (
             <Pill key={index} item={item} />
           ))}
