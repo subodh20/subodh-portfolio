@@ -87,7 +87,7 @@ const ContactForm = () => {
         />
       </div>
       <button
-        className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-var(--primary) text-var(--primary-foreground) hover:bg-var(--primary/90) h-11 rounded-md px-8"
+        className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-var(--primary) text-(--primary) hover:bg-(--primary/90) h-11 rounded-md px-8 cursor-pointer border border-border focus:ring-2 focus:ring-(--primary-foreground)"
         disabled={state.submitting}
         type="submit"
       >

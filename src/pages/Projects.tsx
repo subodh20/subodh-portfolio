@@ -33,7 +33,7 @@ const Projects = () => {
           ))}
         </div>
         <div className="text-center mt-16">
-          <button className="flex flex-row text-center border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 rounded-md px-8">
+          <button className="flex flex-row items-center border border-input bg-background hover:bg-(--accent) hover:text-(--accent-foreground) h-11 rounded-md px-8 cursor-pointer transition-colors">
             View All Projects
             <FaExternalLinkAlt className="ml-2 h-4 w-4" />
           </button>
