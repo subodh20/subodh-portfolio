@@ -33,7 +33,7 @@ const BriefIntro = () => {
             className="text-lg text-muted-foreground/80 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in"
             style={{ animationDelay: "0.3s" }}
           >
-            I build responsive and user-friendly applications with modern
+            I build responsive and user-friendly web applications with modern
             technologies.
           </p>
           {/* Download resume button */}
@@ -46,7 +46,7 @@ const BriefIntro = () => {
               <FaArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </div>
             <button
-              className="border border-border hover:bg-accent hover:text-(--accent-foreground) px-4 py-2 rounded-md transition-colors cursor-pointer"
+              className="border border-(--border) hover:bg-(--accent) hover:text-(--accent-foreground) px-4 py-2 rounded-md transition-colors cursor-pointer"
               onClick={createDownloadLinkandDownloadFile}
             >
               Download Resume
@@ -54,7 +54,7 @@ const BriefIntro = () => {
           </div>
           {/* My social links */}
           <div
-            className="flex items-center justify-center gap-6 animate-fade-in"
+            className="flex items-center justify-center gap-6 animate-fade-in cursor-pointer"
             style={{ animationDelay: "0.5s" }}
           >
             <FaGithub className="h-6 w-6" />
