@@ -30,7 +30,7 @@ const Blog = () => {
     const getArticles = async () => {
       try {
         const res = await fetch(
-          "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@subodhtiwari360"
+          "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@subodhtiwari360",
         );
         const data = await res.json();
         updateArticleCount(data.items.length);
@@ -41,7 +41,6 @@ const Blog = () => {
     };
     getArticles();
   }, []);
-  console.log(blogArticles);
   return (
     <section id="blog" className="py-24 relative">
       <div className="container mx-auto px-6">

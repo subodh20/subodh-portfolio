@@ -1,5 +1,6 @@
 @import "./tailwindImport.css";
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @layer base {
   :root {
     --background: #e8eff5;
@@ -17,24 +18,29 @@
     --accent: #f5f8fb;
     --accent-foreground: #475569;
 
+    --muted: #8b9cb3;
+    --muted-foreground: #0f172a;
+
     --border: #c1ccd9;
     --input: #c1ccd9;
     --ring: #0284c7;
 
     --radius: 0.5rem;
-
+    --font-sans:
+      "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      Roboto, Arial, "Noto Sans" sans-serif;
     --shadow-2xs: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
     --shadow-xs: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
-    --shadow-sm: 0 1px 3px 0px rgba(0, 0, 0, 0.1),
-      0 1px 2px -1px rgba(0, 0, 0, 0.1);
-    --shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.1),
-      0 1px 2px -1px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 1px 3px 0px rgba(0, 0, 0, 0.1),
-      0 2px 4px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 1px 3px 0px rgba(0, 0, 0, 0.1),
-      0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 1px 3px 0px rgba(0, 0, 0, 0.1),
-      0 8px 10px -1px rgba(0, 0, 0, 0.1);
+    --shadow-sm:
+      0 1px 3px 0px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    --shadow:
+      0 1px 3px 0px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    --shadow-md:
+      0 1px 3px 0px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg:
+      0 1px 3px 0px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-xl:
+      0 1px 3px 0px rgba(0, 0, 0, 0.1), 0 8px 10px -1px rgba(0, 0, 0, 0.1);
     --shadow-2xl: 0 1px 3px 0px rgba(0, 0, 0, 0.25);
     --tracking-normal: 0em;
     --spacing: 0.25rem;
@@ -55,28 +61,31 @@
     --accent: #020617;
     --accent-foreground: #8b9cb3;
 
+    --muted: #64748b;
+    --muted-foreground: #f5f8fb;
+
     --border: #475569;
     --input: #475569;
     --ring: #38bdf8;
 
     --shadow-2xs: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
     --shadow-xs: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
-    --shadow-sm: 0 1px 3px 0px rgba(0, 0, 0, 0.1),
-      0 1px 2px -1px rgba(0, 0, 0, 0.1);
-    --shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.1),
-      0 1px 2px -1px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 1px 3px 0px rgba(0, 0, 0, 0.1),
-      0 2px 4px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 1px 3px 0px rgba(0, 0, 0, 0.1),
-      0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 1px 3px 0px rgba(0, 0, 0, 0.1),
-      0 8px 10px -1px rgba(0, 0, 0, 0.1);
+    --shadow-sm:
+      0 1px 3px 0px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    --shadow:
+      0 1px 3px 0px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    --shadow-md:
+      0 1px 3px 0px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg:
+      0 1px 3px 0px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-xl:
+      0 1px 3px 0px rgba(0, 0, 0, 0.1), 0 8px 10px -1px rgba(0, 0, 0, 0.1);
     --shadow-2xl: 0 1px 3px 0px rgba(0, 0, 0, 0.25);
   }
 }
 @layer base {
   * {
-    border: var(-border);
+    border: var(--border);
   }
   html {
     scroll-behavior: smooth;
@@ -84,12 +93,39 @@
   body {
     color: var(--foreground);
     background: var(--background);
+    font-family: var(--font-sans);
   }
 }
 @layer components {
+  .text-gradient {
+    display: inline-block;
+    background-image: linear-gradient(
+      to right,
+      var(--accent),
+      #22d3ee,
+      #2dd4bf
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .bg-gradient-radial {
+    background: radial-gradient(circle at center, var(--tw-gradient-stops));
+  }
 }
 @layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+    opacity: 0;
+  }
 }
-/* @media (prefers-color-scheme: dark) {
-  
-} */

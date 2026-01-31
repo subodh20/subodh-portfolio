@@ -31,24 +31,24 @@ const ProjectsCard = (props: ProjectCardsProp): React.JSX.Element => {
           />
           <div className="absolute left-4 bottom-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-100">
             <div className="flex gap-3">
-              <button className="bg-secondary text-secondary-foreground hover:bg-secondary/80 h-9 rounded-md px-3">
+              <div className="flex justify-center items-center bg-secondary text-secondary-foreground hover:bg-secondary/80 h-9 rounded-md px-3 ">
                 <a
                   href={project.srcCode}
-                  className="flex text-center justify-center"
+                  className="flex items-center justify-center"
                 >
                   <FaGithub className="h-4 w-4 mr-2" />
                   Source code
                 </a>
-              </button>
-              <button className="bg-secondary text-secondary-foreground hover:bg-secondary/80 h-9 rounded-md px-3">
+              </div>
+              <div className="flex justify-center item-center bg-secondary text-secondary-foreground hover:bg-secondary/80 h-9 rounded-md px-3 ">
                 <a
                   href={project.liveLink}
-                  className="flex text-center justify-center"
+                  className="flex items-center justify-center"
                 >
                   <FaExternalLinkAlt className="h-4 w-4 mr-2" />
                   Live demo
                 </a>
-              </button>
+              </div>
             </div>
           </div>
         </div>

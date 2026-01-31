@@ -18,14 +18,14 @@ const FeaturedArticleCard = ({
       rel="noopener noreferrer"
       className="group flex flex-col md:flex-row md:items-center justify-between p-5 rounded-xl border border-var(--border)/50 bg-var(--card)/50 hover:bg-card hover:border-var(--accent)/30 transition-all duration-100 "
     >
-      <div className="flex-1 mb-3 md:mb-0">
+      <div className="flex flex-col flex-1 justify-center items-start mb-3 md:mb-0">
         <div className="flex items-center gap-2 mb-2">
           <span className="text-xs font-mono px-2 py-1 rounded bg-var(--accent)/10 text-var(--accent)">
             {link.includes("medium")
               ? "Medium"
               : link.includes("linkedin")
-              ? "LinkedIn"
-              : "Dev.to"}
+                ? "LinkedIn"
+                : "Dev.to"}
           </span>
           <span className="text-xs text-muted-foreground">{pubDate}</span>
         </div>

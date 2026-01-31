@@ -26,17 +26,17 @@ const About = () => {
             {/* Image */}
             <div className="relative">
               <div className="aspect-square max-w-md mx-auto lg:max-w-none relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-(--accent/20) to-var(--primary/20) rounded-3xl transform rotate-3" />
-                <div className="absolute inset-0 bg-(--card) border border-var(--border/50) rounded-3xl overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-3xl transform rotate-3" />
+                <div className="absolute inset-0 bg-(--card) border border-border/50 rounded-3xl overflow-hidden">
                   <img
-                    src=""
+                    src="/subodh-profile-photo.png"
                     alt="Subodh Tiwari"
                     className="w-full h-full object-cover opacity-90"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
                 </div>
                 {/* Experience Badge */}
-                <div className="absolute -right-5 top-1/4 bg-(--card/90) backdrop-blur-sm border border-(--border/50) rounded-xl p-4 shadow-2xl">
+                <div className="absolute -right-5 top-1/4 bg-(--card/90) backdrop-blur-sm border border-border/50 rounded-xl p-4 shadow-2xl">
                   <p className="text-3xl font-bold text-accent"> 3+</p>
                   <p className="text-sm">Years Exp.</p>
                 </div>
