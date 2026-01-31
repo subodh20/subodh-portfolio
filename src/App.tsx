@@ -6,7 +6,7 @@ import ThemeProvider from "./contexts/ThemeProvider";
 function App(): JSX.Element {
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: "/subodh-portfolio/",
       element: <MainApp />,
     },
     {
