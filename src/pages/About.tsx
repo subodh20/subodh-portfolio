@@ -29,7 +29,7 @@ const About = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-3xl transform rotate-3" />
                 <div className="absolute inset-0 bg-(--card) border border-border/50 rounded-3xl overflow-hidden">
                   <img
-                    src="/subodh-profile-photo.png"
+                    src="/public/subodh-profile-photo.png"
                     alt="Subodh Tiwari"
                     className="w-full h-full object-cover opacity-90"
                   />
