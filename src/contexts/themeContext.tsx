@@ -1,7 +1,7 @@
-import { createContext } from "react";
+import { createContext, type Dispatch, type SetStateAction } from "react";
 
 const ThemeContext = createContext({
   theme: "light",
-  setTheme: (theme: "light" | "dark") => {},
+  setTheme: (() => {}) as Dispatch<SetStateAction<"light" | "dark">>,
 });
 export default ThemeContext;
