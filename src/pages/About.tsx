@@ -1,5 +1,6 @@
 import { FaMapMarkerAlt, FaBriefcase, FaGraduationCap } from "react-icons/fa";
 import Card from "../components/Card";
+import profile from "@sub/assets/profile.png";
 const aboutItems = [
   {
     title: "Location",
@@ -29,7 +30,7 @@ const About = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-3xl transform rotate-3" />
                 <div className="absolute inset-0 bg-(--card) border border-border/50 rounded-3xl overflow-hidden">
                   <img
-                    src="/public/subodh-profile-photo.png"
+                    src={profile}
                     alt="Subodh Tiwari"
                     className="w-full h-full object-cover opacity-90"
                   />
