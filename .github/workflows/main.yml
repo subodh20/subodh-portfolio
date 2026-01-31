@@ -32,6 +32,10 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: List dist files
+        run: ls -R dist
+
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
