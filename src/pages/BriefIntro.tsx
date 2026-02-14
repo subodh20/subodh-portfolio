@@ -3,7 +3,7 @@ import { IoIosMail } from "react-icons/io";
 const BriefIntro = () => {
   const createDownloadLinkandDownloadFile = () => {
     const link = document.createElement("a");
-    link.href = `${import.meta.env.BASE_URL}/docs/resume.docx`;
+    link.href = `${import.meta.env.BASE_URL}docs/resume.docx`;
     link.download = "Subodh-Tiwari-Resume.docx";
     document.body.appendChild(link);
     link.click();

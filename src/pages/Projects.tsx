@@ -25,7 +25,7 @@ const Projects = () => {
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             A selection of projects that showscase my skills and passion for
-            creating quality software applications
+            creating quality software applications.
           </p>
         </div>
         <div className="space-y-24 max-w-6xl mx-auto">

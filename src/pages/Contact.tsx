@@ -16,7 +16,7 @@ const Contact = () => {
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Have you got any project in mind? I'd love to hear about the
               project. Drop me a message and let's discuss how we can
-              collaborate ro bring your ideas to life!
+              collaborate or bring your ideas to life!
             </p>
           </div>
           {/* contact form */}
