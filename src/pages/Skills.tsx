@@ -50,7 +50,8 @@ const Skills = () => {
             Skills and Expertise
           </h2>
           <p className="text-muted-background max-w-2xl mx-auto">
-            A versatile toolkit for building modern, scalable applications
+            A versatile list of skills that I have acquired and honed over the
+            years.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">

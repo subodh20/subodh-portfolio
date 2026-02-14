@@ -57,9 +57,23 @@ const BriefIntro = () => {
             className="flex items-center justify-center gap-6 animate-fade-in cursor-pointer"
             style={{ animationDelay: "0.5s" }}
           >
-            <FaGithub className="h-6 w-6" />
-            <FaLinkedin className="h-6 w-6" />
-            <IoIosMail className="h-6 w-6" />
+            <a
+              href="https://github.com/subodh20"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="h-6 w-6" />
+            </a>
+            <a
+              href="https://www.linkedin.com/feed/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin className="h-6 w-6" />
+            </a>
+            <a href="mailto:subodhtiwari360@gmail.com">
+              <IoIosMail className="h-6 w-6" />
+            </a>
           </div>
         </div>
       </div>

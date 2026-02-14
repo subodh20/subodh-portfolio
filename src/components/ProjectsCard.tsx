@@ -35,6 +35,8 @@ const ProjectsCard = (props: ProjectCardsProp): React.JSX.Element => {
                 <a
                   href={project.srcCode}
                   className="flex items-center justify-center"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <FaGithub className="h-4 w-4 mr-2" />
                   Source code
@@ -44,6 +46,8 @@ const ProjectsCard = (props: ProjectCardsProp): React.JSX.Element => {
                 <a
                   href={project.liveLink}
                   className="flex items-center justify-center"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <FaExternalLinkAlt className="h-4 w-4 mr-2" />
                   Live demo
@@ -66,7 +70,7 @@ const ProjectsCard = (props: ProjectCardsProp): React.JSX.Element => {
             <FaExternalLinkAlt className="h-5 w-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
           </a>
         </h3>
-        <p className="text-muted-foreground leading-relaxed">
+        <p className="text-muted-foreground leading-relaxed text-left">
           {project.description}
         </p>
         <div className="flex flex-wrap items-center justify-center  gap-2 pt-2 lg:justify-start">

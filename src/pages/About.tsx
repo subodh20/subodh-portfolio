@@ -56,12 +56,12 @@ const About = () => {
                 </h2>
               </div>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  I'm a passionate frontend developer with over 3 years of
+                <p className="text-left">
+                  I'm a passionate software developer with over 3 years of
                   experience building modern web applications. I specialize in
-                  React, TypeScript, and modern CSS frameworks.
+                  React, TypeScript, Node, and modern CSS frameworks.
                 </p>
-                <p>
+                <p className="text-left">
                   My journey in tech began with a curiosity for how things work,
                   and it has evolved into a career where I get to solve problems
                   and create beautiful user interfaces.

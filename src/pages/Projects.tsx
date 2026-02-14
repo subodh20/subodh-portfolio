@@ -1,12 +1,13 @@
+import portfoliImage from "@sub/assets/portfolio-image.png";
 const myProjects = [
   {
-    title: "Old Portfolio",
-    image: "",
-    srcCode: "",
-    liveLink: "https://subodh-portfolio.netlify.app",
-    techStack: ["React", "Tailwind", "SCSS"],
+    title: "Portfolio Website",
+    image: portfoliImage,
+    srcCode: "https://github.com/subodh20/subodh-portfolio",
+    liveLink: "https://subwritescode.com",
+    techStack: ["React", "TypeScript", "Tailwind", "CSS"],
     description:
-      "This is the very first portfolio app developed while I was learning React",
+      "This is my personal portfolio website. Through this portfolio, I aim to showcase my skills, projects and experiences in the field of software development. Along with my skills and projects, I also share my journey as a developer, Including the challenges I have faced and the lessons I have learned along the way through blog posts and articles.",
   },
 ];
 import { FaExternalLinkAlt } from "react-icons/fa";
@@ -16,7 +17,7 @@ const Projects = () => {
     <section id="projects" className="py-24 relative">
       <div className="container  mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-accent font-mono text-sm mb-4 tracking-wider uppercase">
+          <p className="text-accent font-mono text-sm mb-4 tracking-wider uppercase p-0 m-0">
             Portfolio
           </p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -32,12 +33,17 @@ const Projects = () => {
             <ProjectsCard key={index} index={index} project={project} />
           ))}
         </div>
-        <div className="flex justify-center items-center  mt-16">
+        <a
+          className="flex justify-center items-center  mt-16"
+          href="https://github.com/subodh20?tab=repositories&q=&type=source&language=&sort="
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <button className="flex flex-row items-center border border-input bg-background hover:bg-(--accent) hover:text-(--accent-foreground) h-11 rounded-md px-8 cursor-pointer transition-colors">
             View All Projects
             <FaExternalLinkAlt className="ml-2 h-4 w-4" />
           </button>
-        </div>
+        </a>
       </div>
     </section>
   );
