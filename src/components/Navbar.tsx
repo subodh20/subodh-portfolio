@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="#" onClick={() => setActiveIndex(null)}>
             <svg
-              className="h-30 w-30"
+              className="h-16 w-16 md:h-20 md:w-20"
               viewBox="0 0 1000 1000"
               xmlns="http://www.w3.org/2000/svg"
               aria-label="ST logo"

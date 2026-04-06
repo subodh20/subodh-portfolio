@@ -20,7 +20,7 @@ const aboutItems = [
 ];
 const About = () => {
   return (
-    <section id="about" className="py-24 relative">
+    <section id="about" className="py-12 md:py-24 relative">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -37,7 +37,7 @@ const About = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
                 </div>
                 {/* Experience Badge */}
-                <div className="absolute -right-5 top-1/4 bg-(--card/90) backdrop-blur-sm border border-border/50 rounded-xl p-4 shadow-2xl">
+                <div className="absolute -right-2 sm:-right-5 top-1/4 bg-(--card/90) backdrop-blur-sm border border-border/50 rounded-xl p-3 sm:p-4 shadow-2xl">
                   <p className="text-3xl font-bold text-accent"> 3+</p>
                   <p className="text-sm">Years Exp.</p>
                 </div>
@@ -50,24 +50,24 @@ const About = () => {
                 <p className="text-accent font-mono text-sm mb-4 tracking-wider uppercase">
                   About Me
                 </p>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-[1.15]">
                   Passionate about crafting
                   <span className="text-gradient">digital experiences</span>
                 </h2>
               </div>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p className="text-left">
+              <div className="space-y-4 text-muted-foreground leading-relaxed text-base md:text-lg">
+                <p>
                   I'm a passionate software developer with over 3 years of
                   experience building modern web applications. I specialize in
                   React, TypeScript, Node, and modern CSS frameworks.
                 </p>
-                <p className="text-left">
+                <p>
                   My journey in tech began with a curiosity for how things work,
                   and it has evolved into a career where I get to solve problems
                   and create beautiful user interfaces.
                 </p>
               </div>
-              <div className="grid grid-cols-2 gap-4 pt-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
                 {aboutItems.map((item, index) => (
                   <Card
                     key={index}

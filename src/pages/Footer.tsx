@@ -8,34 +8,37 @@ const Footer = () => {
             <div className="flex flex-col items-center md:items-start gap-2">
               <a
                 href="#"
-                className="font-mono text-xl font-bold hover:text-var(--accent) transition-colors"
+                className="font-mono text-xl font-bold hover:text-(--primary) transition-colors"
               >
                 Subodh Tiwari
               </a>
               <p className="text-sm text-muted-foreground flex items-center gap-1">
-                &copy; {new Date().getFullYear()} Subodh Tiwari. All right
+                &copy; {new Date().getFullYear()} Subodh Tiwari. All rights
                 reserved
               </p>
             </div>
-            <div className="flex flex-center gap-4">
+            <div className="flex justify-center items-center gap-4">
               <a
                 href="https://github.com/subodh20"
                 target="_blank"
-                className="h-10 w-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-var(--accent) hover:border-var(--accent)/50 transition-all"
+                rel="noopener noreferrer"
+                className="h-10 w-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-(--primary) hover:border-(--primary)/50 transition-all"
               >
                 <FaGithub />
               </a>
               <a
                 href="https://www.linkedin.com/in/subodh-tiwari/"
                 target="_blank"
-                className="h-10 w-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-var(--accent) hover:border-var(--accent)/50 transition-all"
+                rel="noopener noreferrer"
+                className="h-10 w-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-(--primary) hover:border-(--primary)/50 transition-all"
               >
                 <FaLinkedinIn />
               </a>
               <a
-                href="https://github.com/subodh20"
+                href="https://x.com/subodht66244784"
                 target="_blank"
-                className="h-10 w-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-var(--accent) hover:border-var(--accent)/50 transition-all"
+                rel="noopener noreferrer"
+                className="h-10 w-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-(--primary) hover:border-(--primary)/50 transition-all"
               >
                 <FaXTwitter />
               </a>

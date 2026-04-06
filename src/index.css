@@ -1,6 +1,5 @@
 @import "./tailwindImport.css";
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@400;500&display=swap");
 @layer base {
   :root {
     --background: #e8eff5;
@@ -28,7 +27,9 @@
     --radius: 0.5rem;
     --font-sans:
       "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-      Roboto, Arial, "Noto Sans" sans-serif;
+      Roboto, Arial, "Noto Sans", sans-serif;
+    --font-mono:
+      "JetBrains Mono", ui-monospace, "Cascadia Code", "Fira Code", monospace;
     --shadow-2xs: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
     --shadow-xs: 0 1px 3px 0px rgba(0, 0, 0, 0.05);
     --shadow-sm:
@@ -94,6 +95,9 @@
     color: var(--foreground);
     background: var(--background);
     font-family: var(--font-sans);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
   }
 }
 @layer components {
