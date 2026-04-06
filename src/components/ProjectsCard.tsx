@@ -17,11 +17,11 @@ const ProjectsCard = (props: ProjectCardsProp): React.JSX.Element => {
   return (
     <div
       className={`flex flex-col ${
-        index % 2 === 0 ? "lg:flex-row" : "lg-flex-row-reverse"
-      } gap-8 lg:gap-12 items-center`}
+        index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+      } gap-6 lg:gap-12 items-center`}
     >
       {/* Project Image */}
-      <div className="w-full lg:w-3/5 group">
+      <div className="w-full lg:w-1/2 group">
         <div className="relative overflow-hidden rounded-2xl border border-border/50">
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 " />
           <img
@@ -58,7 +58,7 @@ const ProjectsCard = (props: ProjectCardsProp): React.JSX.Element => {
         </div>
       </div>
       {/* Project Details */}
-      <div className="w-full lg:w-2/5 space-y-4">
+      <div className="w-full lg:w-1/2 space-y-4 text-left">
         <h3 className="text-2xl md:text-3xl font-bold group">
           <a
             href={project.liveLink}
@@ -70,10 +70,10 @@ const ProjectsCard = (props: ProjectCardsProp): React.JSX.Element => {
             <FaExternalLinkAlt className="h-5 w-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
           </a>
         </h3>
-        <p className="text-muted-foreground leading-relaxed text-left">
+        <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
           {project.description}
         </p>
-        <div className="flex flex-wrap items-center justify-center  gap-2 pt-2 lg:justify-start">
+        <div className="flex flex-wrap items-center gap-2 pt-2">
           {project.techStack.map((item, index) => (
             <Pill key={index} item={item} />
           ))}

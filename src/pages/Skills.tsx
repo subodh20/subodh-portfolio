@@ -40,16 +40,16 @@ const skillList = [
 ];
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 relative">
+    <section id="skills" className="py-12 md:py-24 relative">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-accent font-mono text-sm mb-4 tracking-wider uppercase">
             What I Do
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-[1.15]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-[1.15]">
             Skills and Expertise
           </h2>
-          <p className="text-muted-background max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto text-left">
             A versatile list of skills that I have acquired and honed over the
             years.
           </p>

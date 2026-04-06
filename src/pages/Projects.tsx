@@ -14,21 +14,21 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import ProjectsCard from "../components/ProjectsCard";
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 relative">
+    <section id="projects" className="py-12 md:py-24 relative">
       <div className="container  mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-accent font-mono text-sm mb-4 tracking-wider uppercase p-0 m-0">
             Portfolio
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-[1.15]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-[1.15]">
             Featured Projects
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto text-left">
             A selection of projects that showcase my skills and passion for
             creating quality software applications.
           </p>
         </div>
-        <div className="space-y-24 max-w-6xl mx-auto">
+        <div className="space-y-12 lg:space-y-24 max-w-6xl mx-auto">
           {myProjects.map((project, index) => (
             <ProjectsCard key={index} index={index} project={project} />
           ))}

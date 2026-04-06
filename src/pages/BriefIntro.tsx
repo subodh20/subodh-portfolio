@@ -19,7 +19,7 @@ const BriefIntro = () => {
         <div className="max-w-4xl mx-auto text-center ">
           {/* Introduction Section */}
           <h1
-            className="text-5xl md:text-6xl font-bold mb-4 leading-[1.1] animate-fade-in "
+            className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 leading-[1.1] animate-fade-in "
             style={{ animationDelay: "0.3s" }}
           >
             <span className="text-(--foreground)">Hi, I'm </span>
@@ -34,7 +34,7 @@ const BriefIntro = () => {
           </p>
           {/* Description */}
           <p
-            className="text-base text-muted-foreground/80 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in"
+            className="text-base md:text-lg text-muted-foreground/80 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in"
             style={{ animationDelay: "0.3s" }}
           >
             I build responsive and user-friendly web applications with modern
