@@ -5,10 +5,10 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <p className="text-var(--accent) font-mono text-sm mb-4 tracking-wider uppercase">
+            <p className="text-accent font-mono text-sm mb-4 tracking-wider uppercase">
               Get In Touch
             </p>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-[1.15]">
               Let's build something{" "}
               <span className="text-gradient"> useful and amazing</span>{" "}
               together
@@ -20,7 +20,7 @@ const Contact = () => {
             </p>
           </div>
           {/* contact form */}
-          <div className="p-8 rounded-3xl border border-var(--border)/50 bg-var(--card)/30 backdrop-blur-sm">
+          <div className="p-8 rounded-3xl border border-(--border) bg-(--card) backdrop-blur-sm">
             <ContactForm />
           </div>
         </div>

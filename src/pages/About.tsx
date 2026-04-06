@@ -50,7 +50,7 @@ const About = () => {
                 <p className="text-accent font-mono text-sm mb-4 tracking-wider uppercase">
                   About Me
                 </p>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-[1.15]">
                   Passionate about crafting
                   <span className="text-gradient">digital experiences</span>
                 </h2>

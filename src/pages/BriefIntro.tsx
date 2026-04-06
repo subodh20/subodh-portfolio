@@ -1,13 +1,17 @@
 import { FaArrowRight, FaGithub, FaLinkedin } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 const BriefIntro = () => {
-  const createDownloadLinkandDownloadFile = () => {
+  const createDownloadLinkandDownloadFile = async () => {
+    const res = await fetch(`${import.meta.env.BASE_URL}docs/resume.docx`);
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
-    link.href = `${import.meta.env.BASE_URL}docs/resume.docx`;
+    link.href = url;
     link.download = "Subodh-Tiwari-Resume.docx";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    URL.revokeObjectURL(url);
   };
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -15,7 +19,7 @@ const BriefIntro = () => {
         <div className="max-w-4xl mx-auto text-center ">
           {/* Introduction Section */}
           <h1
-            className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in "
+            className="text-5xl md:text-6xl font-bold mb-4 leading-[1.1] animate-fade-in "
             style={{ animationDelay: "0.3s" }}
           >
             <span className="text-(--foreground)">Hi, I'm </span>
@@ -23,14 +27,14 @@ const BriefIntro = () => {
           </h1>
           {/* Subtitle */}
           <p
-            className="text-xl md:text-2xl text-muted-foreground mb-4 font-mono animate-fade-in"
+            className="text-lg md:text-xl text-muted-foreground mb-4 font-mono animate-fade-in"
             style={{ animationDelay: "0.2s" }}
           >
             Full Stack Developer
           </p>
           {/* Description */}
           <p
-            className="text-lg text-muted-foreground/80 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in"
+            className="text-base text-muted-foreground/80 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in"
             style={{ animationDelay: "0.3s" }}
           >
             I build responsive and user-friendly web applications with modern
@@ -38,7 +42,7 @@ const BriefIntro = () => {
           </p>
           {/* Download resume button */}
           <div
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-fade-in"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 animate-fade-in"
             style={{ animationDelay: "0.4s" }}
           >
             <div className="flex items-center gap-2 group ">
@@ -65,7 +69,7 @@ const BriefIntro = () => {
               <FaGithub className="h-6 w-6" />
             </a>
             <a
-              href="https://www.linkedin.com/feed/"
+              href="https://www.linkedin.com/in/subodh-tiwari/"
               target="_blank"
               rel="noopener noreferrer"
             >

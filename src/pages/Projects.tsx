@@ -20,11 +20,11 @@ const Projects = () => {
           <p className="text-accent font-mono text-sm mb-4 tracking-wider uppercase p-0 m-0">
             Portfolio
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-[1.15]">
             Featured Projects
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A selection of projects that showscase my skills and passion for
+            A selection of projects that showcase my skills and passion for
             creating quality software applications.
           </p>
         </div>

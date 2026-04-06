@@ -10,7 +10,7 @@ const skillList = [
   {
     Icon: FaCode,
     title: "Frontend",
-    skills: "React, TypeScript, Tailwind css",
+    skills: "React, TypeScript, Tailwind CSS",
     color: "from-blue-500/20 to-cyan-500/20",
   },
   {
@@ -46,7 +46,7 @@ const Skills = () => {
           <p className="text-accent font-mono text-sm mb-4 tracking-wider uppercase">
             What I Do
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-[1.15]">
             Skills and Expertise
           </h2>
           <p className="text-muted-background max-w-2xl mx-auto">

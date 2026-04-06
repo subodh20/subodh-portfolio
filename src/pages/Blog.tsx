@@ -48,19 +48,19 @@ const Blog = () => {
           <p className="text-accent font-mono text-sm mb-4 tracking-wider uppercase">
             blog
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-[1.15]">
             Thoughts & Writings
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-left">
             I recently started writing articles to share my knowledge and
-            experiences in software development. I write abouth various topics
+            experiences in software development. I write about various topics
             including web development, programming languages, and best
             practices. My goal is to provide valuable insights in core software
-            development conceps and help other developers on their learning
+            development concepts and help other developers on their learning
             journey.
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl max-auto mb-16">
+        <div className="flex justify-center gap-6 max-w-5xl mx-auto mb-16">
           {blogPlateforms.map((item, index) => (
             <BlogPlatformCard key={index} platform={item} />
           ))}

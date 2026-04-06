@@ -22,3 +22,15 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Screenshots / debug images
+*.png
+
+# Playwright
+.playwright-mcp/
+playwright.config.ts
+tests/
+test-results/
+
+# Claude local settings
+.claude/settings.local.json
